@@ -1,0 +1,196 @@
+ATIVIDADES DE PRÁTICA GIT - curso-programacao-fundacao-jicred
+Branch da aula: feat/atividade-de-pratica
+
+Objetivo da aula: praticar os comandos git status, git add, git commit, git push, git log, git clone e git pull.
+
+Faça as atividades na ordem. Leia cada passo com calma e observe o que aparece no terminal. A ideia não é decorar tudo de primeira, mas entender o que cada comando faz.
+
+---
+
+1) Primeiro commit: git status, git add e git commit
+
+   Nesta atividade, você vai criar um arquivo, preparar esse arquivo para o Git e salvar a mudança no histórico do projeto.
+
+   a) Crie um arquivo de texto com seu nome.
+      Exemplo: nome-aluno.txt
+
+   b) Dentro do arquivo, escreva seu nome e uma frase curta sobre você.
+
+   c) Execute:
+      git status
+
+      Esse comando mostra o estado atual do projeto. Veja se o Git mostra seu arquivo como untracked.
+
+   d) Execute:
+      git add nome-aluno.txt
+
+      Esse comando coloca o arquivo na área de stage. Pense no stage como uma área de preparação antes do commit.
+
+   e) Execute novamente:
+      git status
+
+      Confirme que o arquivo está pronto para entrar no commit.
+
+   f) Execute:
+      git commit -m "adiciona arquivo com nome do aluno"
+
+      Esse comando cria um registro da sua mudança no histórico do projeto.
+
+   g) Execute:
+      git log
+
+      Confira se o commit que você acabou de criar aparece no histórico.
+
+---
+
+2) Segundo commit: alterar, conferir e salvar de novo
+
+   Agora você vai alterar um arquivo que já existe e criar um novo commit.
+
+   a) Edite o arquivo criado na atividade 1.
+      Adicione uma nova linha com sua turma, idade ou uma frase curta.
+
+   b) Execute:
+      git status
+
+      Veja que o arquivo aparece como modificado.
+
+   c) Execute:
+      git add nome-aluno.txt
+
+   d) Execute:
+      git commit -m "atualiza arquivo com nome do aluno"
+
+   e) Execute:
+      git log
+
+      Verifique se agora aparecem pelo menos dois commits no histórico.
+
+   f) Execute:
+      git status
+
+      Confirme que não há alterações pendentes.
+
+---
+
+3) Enviar para o GitHub: git push
+
+   Nesta atividade, você vai enviar seus commits do computador para o GitHub.
+
+   a) Antes de enviar, execute:
+      git status
+
+      Se não houver alterações pendentes, continue.
+
+   b) Execute:
+      git log
+
+      Confira rapidamente os commits que serão enviados.
+
+   c) Execute:
+      git push origin feat/atividade-de-pratica
+
+   d) Abra o repositório no GitHub e confira se seus commits aparecem na branch da aula.
+
+---
+
+4) Baixar o projeto em outra pasta: git clone
+
+   Nesta atividade, você vai criar uma nova cópia do repositório no seu computador. Isso simula o que fazemos quando começamos a trabalhar em um projeto que está no GitHub.
+
+   a) Escolha outra pasta no seu computador.
+      Não use a mesma pasta onde você fez as atividades anteriores.
+
+   b) Execute:
+      git clone https://github.com/iuryfranca/curso-programacao-fundacao-jicred.git
+
+   c) Entre na pasta clonada usando o terminal:
+      cd curso-programacao-fundacao-jicred
+
+   d) Veja as branches disponíveis:
+      git branch -a
+
+   e) Entre na branch da aula:
+      git checkout feat/atividade-de-pratica
+
+   f) Execute:
+      git log
+
+      Confira se aparecem os commits que foram enviados na atividade 3.
+
+   g) Compare as duas pastas:
+      A pasta antiga foi onde você criou commits e fez push.
+      A pasta nova foi criada usando git clone.
+
+---
+
+5) Atividade em dupla: git push e git pull
+
+   Nesta atividade, vocês vão trabalhar em dupla.
+   O Aluno A vai enviar uma mudança para o GitHub usando git push.
+   O Aluno B vai receber essa mudança no computador usando git pull.
+
+   Antes de começar:
+   Os dois alunos precisam estar na mesma branch da aula:
+   git checkout feat/atividade-de-pratica
+
+   Parte A - Aluno A envia uma mudança:
+
+   a) Crie um arquivo com o nome da dupla.
+      Exemplo: dupla-ana-e-pedro.txt
+
+   b) Dentro do arquivo, escreva:
+      Atividade feita pela dupla [nome do aluno A] e [nome do aluno B]
+
+   c) Execute:
+      git status
+
+      Veja que o arquivo novo apareceu.
+
+   d) Execute:
+      git add dupla-ana-e-pedro.txt
+
+   e) Execute:
+      git commit -m "adiciona atividade da dupla"
+
+   f) Execute:
+      git push origin feat/atividade-de-pratica
+
+      Agora a mudança do Aluno A foi enviada para o GitHub.
+
+   Parte B - Aluno B recebe a mudança:
+
+   g) Antes de atualizar, o Aluno B deve procurar o arquivo da dupla na pasta dele.
+      O arquivo ainda não deve aparecer.
+
+   h) Execute:
+      git pull origin feat/atividade-de-pratica
+
+      Esse comando busca no GitHub as mudanças que ainda não estão no computador.
+
+   i) Procure novamente o arquivo da dupla.
+      Agora ele deve aparecer na pasta do Aluno B.
+
+   j) Execute:
+      git log
+
+      Confira se o commit "adiciona atividade da dupla" aparece no histórico.
+
+   k) Execute:
+      git status
+
+      Confirme que não há alterações pendentes.
+
+   Resumo da atividade:
+   O Aluno A usou git push para enviar.
+   O Aluno B usou git pull para receber.
+
+---
+
+CHECKLIST
+
+[ ] Atividade 1 - criei um arquivo, usei status, add, commit e log
+[ ] Atividade 2 - alterei o arquivo e criei um segundo commit
+[ ] Atividade 3 - enviei meus commits para o GitHub com push
+[ ] Atividade 4 - clonei o repositório em outra pasta
+[ ] Atividade 5 - fiz a atividade em dupla usando push e pull
