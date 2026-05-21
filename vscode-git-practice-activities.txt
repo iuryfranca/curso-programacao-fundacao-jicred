@@ -5,7 +5,7 @@ Objetivo da aula: praticar git add, git commit, git push, git pull e git clone u
 Faça as atividades na ordem. Leia cada passo com calma e observe o que aparece no painel do Git. A ideia não é decorar tudo de primeira, mas entender o que cada ação faz e onde clicar.
 
 ATENÇÃO
-Criar novo repositório no seu Github com o nome: Aula-21-05-2016
+Criar novo repositório no seu Github com o nome: Aula-21-05-2026
 
 Como abrir o painel do Git:
 1. Clique no ícone de ramificação na barra lateral esquerda (Controle de Código-Fonte).
