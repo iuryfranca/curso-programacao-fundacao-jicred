@@ -1,0 +1,111 @@
+ATIVIDADES DE PRÁTICA GIT NO VS CODE - curso-programacao-fundacao-jicred
+
+Objetivo da aula: praticar git add, git commit, git push, git pull e git clone usando o painel de Controle de Código-Fonte do VS Code, sem usar o terminal.
+
+Faça as atividades na ordem. Leia cada passo com calma e observe o que aparece no painel do Git. A ideia não é decorar tudo de primeira, mas entender o que cada ação faz e onde clicar.
+
+ATENÇÃO
+Criar novo repositório no seu Github com o nome: Aula-21-05-2016
+
+Como abrir o painel do Git:
+1. Clique no ícone de ramificação na barra lateral esquerda (Controle de Código-Fonte).
+2. Ou use o atalho Ctrl+Shift+G.
+
+O painel mostra o estado do repositório (equivalente ao git status): arquivos em Changes, arquivos em Staged Changes e a branch atual no topo.
+
+---
+
+1) Primeiro commit: conferir status, git add e git commit
+
+   Nesta atividade, você vai criar um arquivo, preparar esse arquivo para o Git e salvar a mudança no histórico do projeto.
+
+   a) Crie um arquivo de texto com seu nome.
+      Exemplo: meu-nome.txt
+
+   b) Dentro do arquivo, escreva seu nome e uma frase curta sobre você.
+      Salve o arquivo (Ctrl+S).
+
+   c) Abra o painel Controle de Código-Fonte (Ctrl+Shift+G).
+
+      Observe a seção Changes (Alterações).
+      Seu arquivo deve aparecer ali com a letra U (untracked) ou M (modified).
+      Isso equivale ao git status: o Git está mostrando que há mudanças ainda não commitadas.
+
+   d) Faça o git add pelo VS Code:
+      Passe o mouse sobre o nome do arquivo em Changes.
+      Clique no ícone + (Stage Changes / Adicionar ao stage).
+      O arquivo sai de Changes e vai para Staged Changes (Alterações preparadas).
+
+      Alternativa: clique no + ao lado do título Changes para adicionar todos os arquivos de uma vez.
+
+   e) Confira o status de novo no mesmo painel.
+
+      Em Changes deve estar vazio (ou com 0 arquivos).
+      Em Staged Changes deve aparecer nome-aluno.txt com M.
+      Isso equivale ao git status depois do git add.
+
+   f) Faça o git commit pelo VS Code:
+      No campo de texto acima do botão Commit, digite a mensagem:
+      adiciona arquivo com nome do aluno
+
+      Clique no botão Commit (laranja, com ícone de check).
+      Ou use Ctrl+Enter com o cursor no campo da mensagem.
+
+   g) Depois do commit, Staged Changes e Changes devem ficar vazios.
+      A branch no topo do painel pode mostrar um asterisco (*) enquanto houver alterações não commitadas; após o commit, o painel fica limpo.
+
+---
+
+2) Segundo commit: alterar, conferir e salvar de novo
+
+   Agora você vai alterar um arquivo que já existe e criar um novo commit.
+
+   a) Edite o arquivo criado na atividade 1.
+      Adicione uma nova linha com as coisas que você fez hoje, pelo menos 5 coisas.
+      Salve o arquivo (Ctrl+S).
+
+   b) Abra o painel Controle de Código-Fonte.
+
+      O arquivo deve aparecer em Changes com M (modified).
+      Clique no arquivo para ver o que mudou (diff) no editor.
+
+   c) Clique no + ao lado do arquivo em Changes (git add).
+
+   d) Digite a mensagem no campo de commit:
+      atualiza arquivo com nome do aluno
+
+      Clique em Commit.
+
+   e) Confira o painel: não deve haver arquivos pendentes em Changes nem em Staged Changes.
+
+   f) Para ver o histórico de commits (equivalente ao git log):
+      Clique nos três pontinhos (...) no canto superior direito do painel Controle de Código-Fonte.
+      Procure a opção relacionada a histórico ou commits, se disponível na sua versão.
+      Ou abra o repositório no GitHub após o push (atividade 3) e confira os commits na branch feat/atividade-de-pratica.
+
+---
+
+3) Enviar para o GitHub: git push
+
+   Nesta atividade, você vai enviar seus commits do computador para o GitHub.
+
+   a) Abra o painel Controle de Código-Fonte.
+
+      Confirme que Changes e Staged Changes estão vazios.
+      Se ainda houver arquivos listados, faça commit antes de continuar.
+
+   b) Envie com git push pelo VS Code:
+
+      Opção 1 - Sincronizar:
+      No topo do painel, clique no ícone de setas circulares (Sync Changes / Sincronizar alterações).
+      O VS Code faz pull e depois push quando necessário.
+
+      Opção 2 - Push direto:
+      Clique nos três pontinhos (...) no painel Controle de Código-Fonte.
+      Escolha Push (ou Push to...).
+      Se pedir, confirme a branch.
+
+   c) Na barra inferior do VS Code, confira o nome da branch (main).
+      Após o push, o indicador de commits à frente/atrás do remoto deve sumir ou atualizar.
+
+   d) Abra o repositório no GitHub e confira se seus commits aparecem na branch da aula.
