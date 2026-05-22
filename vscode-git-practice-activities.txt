@@ -78,11 +78,6 @@ O painel mostra o estado do repositório (equivalente ao git status): arquivos e
 
    e) Confira o painel: não deve haver arquivos pendentes em Changes nem em Staged Changes.
 
-   f) Para ver o histórico de commits (equivalente ao git log):
-      Clique nos três pontinhos (...) no canto superior direito do painel Controle de Código-Fonte.
-      Procure a opção relacionada a histórico ou commits, se disponível na sua versão.
-      Ou abra o repositório no GitHub após o push (atividade 3) e confira os commits na branch feat/atividade-de-pratica.
-
 ---
 
 3) Enviar para o GitHub: git push
